@@ -6,7 +6,23 @@ An API for Bird Scooters
 
 ```javascript
 const Bird = require('node-bird');
-const bird = new Bird();
+const bird = new Bird((options = {}));
+```
+
+## How to use options
+
+```javascript
+const Bird = require('node-bird');
+const bird = new Bird({
+  timeout: 3000000000,
+  headers: {
+    'User-Agent': 'Nintendo 64',
+    'Device-id': 'your_own_uuid',
+    Platform: 'ios',
+    'App-Version': 'the latest version'
+  }
+  ...whatever you need to add
+});
 ```
 
 For a cool example, see _example/index.js_
